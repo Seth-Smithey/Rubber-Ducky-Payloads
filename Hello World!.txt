@@ -1,13 +1,40 @@
+REM Give Windows time to recognize the Rubber Ducky as a keyboard
 DELAY 1000
+
+REM Open the Windows Run dialog (Win + R)
 GUI r
-DELAY 1000
+
+REM Short pause to ensure the Run box is ready
+DELAY 100
+
+REM Type "cmd" to launch Command Prompt
 STRING cmd
+
+REM Press Enter to open Command Prompt
 ENTER
-DELAY 1000
+
+REM Wait for the command prompt window to fully load
+DELAY 200
+
+REM Force-close all running Notepad instances
+REM This ensures no existing tabs or files interfere
+REM WARNING: Unsaved Notepad files will be lost
 STRING taskkill /IM notepad.exe /F
+
+REM Execute the taskkill command
 ENTER
-DELAY 1000
+
+REM Give Windows time to terminate Notepad cleanly
+DELAY 300
+
+REM Launch a fresh instance of Notepad
 STRING notepad
+
+REM Press Enter to open Notepad
 ENTER
-DELAY 1000
+
+REM Wait for Notepad to become the active window
+DELAY 300
+
+REM Type text into the new, empty Notepad window
 STRING Hello World!
