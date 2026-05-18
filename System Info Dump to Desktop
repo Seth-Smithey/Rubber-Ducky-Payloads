@@ -1,0 +1,6 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -NoProfile -Command "Get-ComputerInfo | Out-File $env:USERPROFILE\Desktop\sysinfo.txt"
+ENTER
+DELAY 3000
