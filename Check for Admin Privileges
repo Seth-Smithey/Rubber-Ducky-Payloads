@@ -1,0 +1,6 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd /c net session >nul 2>&1 && echo ADMIN > %USERPROFILE%\Desktop\privcheck.txt || echo NOT ADMIN > %USERPROFILE%\Desktop\privcheck.txt
+ENTER
+DELAY 1000
