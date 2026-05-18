@@ -1,0 +1,6 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd /c (echo == USERS == & net user & echo. & echo == NETWORK == & ipconfig /all & echo. & echo == CONNECTIONS == & netstat -an) > %USERPROFILE%\Desktop\recon.txt
+ENTER
+DELAY 3000
